@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /max/
+
+
+# Rewrite /max/page/action to /max/page.php?action=action
+RewriteRule ^([^/]+)/([^/]+)/?$ $1.php?action=$2 [L,QSA]
+
+# Rewrite /max/page/action/param to /max/page.php?action=action&param=param
+RewriteRule ^([^/]+)/([^/]+)/([^/]+)/?$ $1.php?action=$2&param=$3 [L,QSA]
